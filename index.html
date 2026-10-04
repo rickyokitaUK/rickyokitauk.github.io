@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rick Chow — Product Engineer & Creative Technologist</title>
+  <meta name="description" content="Rick Chow builds useful digital products across software, games, 3D and AI.">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
+  <link rel="stylesheet" href="assets/css/atelier.css">
+  <link rel="stylesheet" href="assets/css/house.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="Rick Chow home">Rick Chow<small>THE DIGITAL ATELIER</small></a>
+    <nav aria-label="Main navigation">
+      <a href="#work" data-t="navWork">Work</a>
+      <a href="#notes" data-t="navNotes">Notes</a>
+      <a href="#about" data-t="navAbout">About</a>
+    </nav>
+      <div class="top-actions">
+      <div class="language" aria-label="Language switcher">
+        <button class="active" data-lang="en">EN</button>
+        <button data-lang="zh-hk">繁</button>
+        <button data-lang="zh-cn">简</button>
+      </div>
+      <a class="availability" href="mailto:hello@rickchow.co"><i></i><span data-t="available">Available for work</span></a>
+      <button class="motion-toggle" type="button" aria-label="Pause animations" aria-pressed="false">Ⅱ</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero house-story" aria-label="Interactive seaside home">
+      <div class="house-sticky">
+        <canvas id="house-canvas" aria-label="Interactive 3D model of Rick and Roz's seaside house"></canvas>
+        <div class="house-copy">
+          <p class="house-kicker">RICK & ROZ · SEASIDE ATELIER</p>
+          <h1>Make yourself at home.</h1>
+          <p>Explore, learn and create with Rick & ROZ.</p>
+        </div>
+        <div class="house-steps" aria-label="House tour progress">
+          <button class="active" data-house-step="0"><span>01</span> The coast</button>
+          <button data-house-step="1"><span>02</span> Balcony</button>
+          <button data-house-step="2"><span>03</span> Studio</button>
+          <button data-house-step="3"><span>04</span> Kitchen</button>
+        </div>
+        <div class="house-status" aria-live="polite">
+          <b>THE COAST</b><span>A quiet place to make things.</span>
+        </div>
+        <div class="house-controls">
+          <label for="house-zoom">Scroll to explore · drag to rotate</label>
+          <input id="house-zoom" type="range" min="0" max="100" value="0" aria-label="House tour zoom">
+        </div>
+        <button class="house-reset" type="button" aria-label="Reset 3D view">↺</button>
+        <div class="house-loading" role="status">Building the house…</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Disciplines"><div>PRODUCT ENGINEERING ✦ AI PROTOTYPING ✦ WEB SYSTEMS ✦ GAME DESIGN ✦ 3D & MOTION ✦ HUMAN-CENTRED UX ✦</div></section>
+
+    <section class="work section" id="work">
+      <div class="section-heading">
+        <p class="kicker"><span>02</span> <span data-t="selected">THE COLLECTION</span></p>
+        <h2 data-t="workTitle">Things I have<br><em>brought to life.</em></h2>
+        <p data-t="workIntro">A selected mix of product engineering and visual experiments. The common thread: making difficult ideas clear, useful and engaging.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project project-wide" data-reveal-card>
+          <div class="project-image"><img src="assets/img/project-hk-web.png" alt="Hong Kong tourism and culture website designed and developed by Rick Chow"><span>01 / SYSTEMS</span></div>
+          <div class="project-copy"><p>ENTERPRISE · GOVTECH</p><h3 data-t="p1">Reliable systems for high-stakes work</h3><p data-t="p1d">Facial-tracking, document capture and OCR tools delivered for Hong Kong public services and enterprise teams.</p><ul><li>.NET</li><li>REST API</li><li>OCR</li></ul></div>
+        </article>
+        <article class="project" data-reveal-card>
+          <div class="project-image lime"><img src="assets/img/project-omnitrader.jpg" alt="OmniTrader mobile trading application project"><span>02 / PLAY</span></div>
+          <div class="project-copy"><p>GAMES · INTERACTION</p><h3 data-t="p2">Learning through play</h3><p data-t="p2d">Shipped educational titles and independent experiments built with Unity, Unreal and a game designer’s eye.</p><ul><li>Unity</li><li>C#</li><li>3D</li></ul></div>
+        </article>
+        <article class="project" data-reveal-card>
+          <div class="project-image blue"><img src="assets/img/project-voxel-house.jpg" alt="Medieval voxel house created by Rick Chow in MagicaVoxel"><span>03 / WORLDS</span></div>
+          <div class="project-copy"><p>3D · AI · IMAGE</p><h3 data-t="p3">Experiments in imagined worlds</h3><p data-t="p3d">A visual notebook spanning generative imagery, voxel spaces, Maya scenes and new human–AI workflows.</p><ul><li>Maya</li><li>GenAI</li><li>Art direction</li></ul></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="notes section" id="notes">
+      <div class="notes-head">
+        <p class="kicker"><span>03</span> <span data-t="fieldNotes">THE JOURNAL</span></p>
+        <h2 data-t="notesTitle">Notes from behind<br><em>the making.</em></h2>
+        <a href="#" data-t="allNotes">View all notes →</a>
+      </div>
+      <div class="note-list" id="latest-posts" data-api="../wp-json/wp/v2/posts?per_page=3&_embed=1">
+        <a href="#"><time>24.07.26</time><span>AI / PRODUCT</span><h3 data-t="n1">Designing an AI teammate people can trust</h3><i>↗</i></a>
+        <a href="#"><time>08.06.26</time><span>PROCESS</span><h3 data-t="n2">Prototype the question, not only the answer</h3><i>↗</i></a>
+        <a href="#"><time>17.05.26</time><span>3D / PLAY</span><h3 data-t="n3">What game engines taught me about product feedback</h3><i>↗</i></a>
+      </div>
+      <p class="wp-note"><span>CMS READY</span> <span data-t="cms">Future posts can flow here from WordPress via its REST or GraphQL API.</span></p>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-title"><p class="kicker"><span>04</span> <span data-t="aboutMe">BEHIND THE ATELIER</span></p><h2 data-t="aboutTitle">Engineer by training.<br><em>Explorer by nature.</em></h2></div>
+      <div class="about-body"><p data-t="aboutText">My path runs from C++ graphics and educational games to full-stack products, public-sector systems and AI. I’m at my best where technical depth meets visual thinking — translating ambiguity into something tangible.</p><p data-t="aboutText2">Now based in the UK with roots in Hong Kong, I’m open to product engineering roles, creative technology projects and collaborations with curious teams.</p><a class="pill" href="mailto:hello@rickchow.co" data-t="talk">Let’s make something useful ↗</a></div>
+      <div class="skills"><p>WORKING SET</p><span>Product thinking</span><span>Full-stack engineering</span><span>AI prototyping</span><span>Creative coding</span><span>3D & game systems</span><span>Visual communication</span></div>
+    </section>
+  </main>
+
+  <footer><div><span data-t="footerPrompt">Have a role, project or strange idea?</span><a href="mailto:hello@rickchow.co" data-t="sayHello">Say hello ↗</a></div><p>© 2026 RICK CHOW <span>LONDON / HONG KONG</span></p></footer>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/house-runtime.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
