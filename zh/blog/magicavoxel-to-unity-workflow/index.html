@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-Hant-HK"> <head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms 'sha256-PBm6AniQvhl/TDG2bDAoBUJa01vsV48hUOMh6qMajLM=' 'sha256-HGRM8TADCrodEZq63l0j4SFcjJN3FoFdLgIhhDhbzq8=' 'sha256-m8HLwuBUcybG2427KYvYf+/mJnWWWeonahoj3+qasts=' 'sha256-SNSzcEHoE6PfP3MlLEHph7PoAgfzV3pSumLtFdUEGwk=' 'sha256-0W3Z+8nBm4elgWeA8ZAH3ycmQmaNa/9EOjo0WtERAO8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com; font-src 'self'; connect-src 'self' blob: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com https://rickchow-visitors.rickchow-uk.workers.dev; media-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="canonical" href="https://rickchow.info/zh/blog/magicavoxel-to-unity-workflow/"><link rel="alternate" hreflang="en-GB" href="https://rickchow.info/blog/magicavoxel-to-unity-workflow/"><link rel="alternate" hreflang="zh-Hant-HK" href="https://rickchow.info/zh/blog/magicavoxel-to-unity-workflow/"><link rel="alternate" hreflang="x-default" href="https://rickchow.info/blog/magicavoxel-to-unity-workflow/"><meta property="og:locale" content="zh_HK"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff2" as="font" type="font/woff2" crossorigin><title>用 MagicaVoxel 和 Unity 製作體素遊戲資產 | Rick Chow</title><meta name="title" content="用 MagicaVoxel 和 Unity 製作體素遊戲資產 | Rick Chow"><meta name="description" content="我如何把視覺參考轉化為模組化的體素美術、乾淨地匯出，並在 Unity 中組合成可遊玩的場景。"><meta property="og:type" content="article"><meta property="og:url" content="https://rickchow.info/zh/blog/magicavoxel-to-unity-workflow/"><meta property="og:title" content="用 MagicaVoxel 和 Unity 製作體素遊戲資產 | Rick Chow"><meta property="og:description" content="我如何把視覺參考轉化為模組化的體素美術、乾淨地匯出，並在 Unity 中組合成可遊玩的場景。"><meta property="og:image" content="https://rickchow.info/media/2026/10/magicavoxel-house-workflow.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="用 MagicaVoxel 和 Unity 製作體素遊戲資產 | Rick Chow"><meta name="twitter:description" content="我如何把視覺參考轉化為模組化的體素美術、乾淨地匯出，並在 Unity 中組合成可遊玩的場景。"><meta name="twitter:image" content="https://rickchow.info/media/2026/10/magicavoxel-house-workflow.jpg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Rick Chow — Journal" href="/rss.xml"><script>
+<!DOCTYPE html><html lang="zh-Hant-HK"> <head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://*.googletagmanager.com https://*.clarity.ms 'sha256-PBm6AniQvhl/TDG2bDAoBUJa01vsV48hUOMh6qMajLM=' 'sha256-HGRM8TADCrodEZq63l0j4SFcjJN3FoFdLgIhhDhbzq8=' 'sha256-m8HLwuBUcybG2427KYvYf+/mJnWWWeonahoj3+qasts=' 'sha256-SWxHbSgKVXhCLacB60qn/rKiACqBaQ8jq//Xoboluqs=' 'sha256-4QGk9zjRjqXceyqfMnsrHinB2L/fpe4b3i1KZcanEj8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com; font-src 'self'; connect-src 'self' blob: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.clarity.ms https://c.bing.com https://rickchow-visitors.rickchow-uk.workers.dev; media-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="canonical" href="https://rickchow.info/zh/blog/magicavoxel-to-unity-workflow/"><link rel="alternate" hreflang="en-GB" href="https://rickchow.info/blog/magicavoxel-to-unity-workflow/"><link rel="alternate" hreflang="zh-Hant-HK" href="https://rickchow.info/zh/blog/magicavoxel-to-unity-workflow/"><link rel="alternate" hreflang="x-default" href="https://rickchow.info/blog/magicavoxel-to-unity-workflow/"><meta property="og:locale" content="zh_HK"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="preload" href="/fonts/atkinson-regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/atkinson-bold.woff2" as="font" type="font/woff2" crossorigin><title>用 MagicaVoxel 和 Unity 製作體素遊戲資產 | Rick Chow</title><meta name="title" content="用 MagicaVoxel 和 Unity 製作體素遊戲資產 | Rick Chow"><meta name="description" content="我如何把視覺參考轉化為模組化的體素美術、乾淨地匯出，並在 Unity 中組合成可遊玩的場景。"><meta property="og:type" content="article"><meta property="og:url" content="https://rickchow.info/zh/blog/magicavoxel-to-unity-workflow/"><meta property="og:title" content="用 MagicaVoxel 和 Unity 製作體素遊戲資產 | Rick Chow"><meta property="og:description" content="我如何把視覺參考轉化為模組化的體素美術、乾淨地匯出，並在 Unity 中組合成可遊玩的場景。"><meta property="og:image" content="https://rickchow.info/media/2026/10/magicavoxel-house-workflow.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="用 MagicaVoxel 和 Unity 製作體素遊戲資產 | Rick Chow"><meta name="twitter:description" content="我如何把視覺參考轉化為模組化的體素美術、乾淨地匯出，並在 Unity 中組合成可遊玩的場景。"><meta name="twitter:image" content="https://rickchow.info/media/2026/10/magicavoxel-house-workflow.jpg"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Rick Chow — Journal" href="/rss.xml"><script>
   // Language: an explicit choice (set by the EN / 繁 switcher) always wins. Without one, visitors whose
   // time zone is in Asia or whose browser prefers Chinese start on the Chinese site. GitHub Pages cannot
   // see IP addresses, and this avoids sending visitor data to a third-party geolocation service.
@@ -65,6 +65,13 @@ const clarityId = "ytpwq88gv4";
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         window.gtag = gtag;
+        window.rcTrack = function (eventName, params) {
+          var consent = null;
+          try { consent = localStorage.getItem('ga-consent'); } catch (e) {}
+          if (consent !== 'granted') return false;
+          gtag('event', eventName, Object.assign({ page_path: location.pathname }, params || {}));
+          return true;
+        };
         var choice = null;
         try { choice = localStorage.getItem('ga-consent'); } catch (e) {}
         gtag('consent', 'default', {
@@ -107,12 +114,82 @@ const clarityId = "ytpwq88gv4";
             var v = btn.getAttribute('data-consent');
             try { localStorage.setItem('ga-consent', v); } catch (err) {}
             gtag('consent', 'update', { analytics_storage: v });
-            if (v === 'granted') window.loadClarity();
+            if (v === 'granted') {
+              window.loadClarity();
+              window.dispatchEvent(new Event('analytics:granted'));
+            }
             else if (window.clarity) window.clarity('consent', false);
             banner.hidden = true;
           });
           document.addEventListener('click', function (e) {
             if (e.target.closest('[data-cookie-settings]')) banner.hidden = false;
           });
+
+          // Portfolio funnel events. Keep all collection behind the visitor's analytics choice.
+          var projectMatch = location.pathname.match(/^\/(?:zh\/)?projects\/([^/]+)\/$/);
+          var projectSent = false;
+          function trackProjectView() {
+            if (!projectMatch || projectSent) return;
+            projectSent = window.rcTrack('project_view', { project_slug: decodeURIComponent(projectMatch[1]) });
+          }
+          trackProjectView();
+          window.addEventListener('analytics:granted', trackProjectView);
+
+          document.addEventListener('click', function (e) {
+            var target = e.target.closest('a, button');
+            if (!target) return;
+            var marker = target.getAttribute('data-analytics');
+            var href = target.getAttribute('href') || '';
+            if (marker === 'hero-work') window.rcTrack('hero_work_click', { link_url: href });
+            if (marker === 'contact' || href === '#contact' || /\/contact\/?(?:#.*)?$/.test(href)) {
+              window.rcTrack('contact_click', { link_url: href });
+            }
+            if (href.toLowerCase().indexOf('mailto:') === 0) {
+              window.rcTrack('email_click', { link_location: target.closest('#contact') ? 'contact' : 'site' });
+            }
+            var youtube = target.closest('[data-yt]');
+            if (youtube) {
+              window.rcTrack('video_play', {
+                video_provider: 'youtube',
+                video_id: youtube.getAttribute('data-yt') || '',
+              });
+            }
+          }, true);
+
+          document.addEventListener('submit', function (e) {
+            if (e.target.matches('[data-contact-form]')) {
+              window.rcTrack('contact_click', { contact_method: 'email_form' });
+              window.rcTrack('email_click', { link_location: 'contact_form' });
+            }
+          }, true);
+
+          document.querySelectorAll('video').forEach(function (video) {
+            video.addEventListener('play', function () {
+              if (video.dataset.analyticsPlayed) return;
+              video.dataset.analyticsPlayed = 'true';
+              window.rcTrack('video_play', {
+                video_provider: 'self_hosted',
+                video_file: (video.currentSrc || '').split('/').pop() || '',
+              });
+            });
+          });
+
+          window.addEventListener('house:room-open', function (e) {
+            window.rcTrack('house_room_open', { room_name: (e.detail && e.detail.room) || 'unknown' });
+          });
+
+          var scrollSent = { 50: false, 90: false };
+          function trackScroll() {
+            var max = document.documentElement.scrollHeight - innerHeight;
+            if (max <= 0) return;
+            var percent = Math.round((scrollY / max) * 100);
+            [50, 90].forEach(function (threshold) {
+              if (percent >= threshold && !scrollSent[threshold]) {
+                if (window.rcTrack('scroll_' + threshold, { percent_scrolled: threshold })) scrollSent[threshold] = true;
+              }
+            });
+          }
+          addEventListener('scroll', trackScroll, { passive: true });
+          window.addEventListener('analytics:granted', trackScroll);
         })();
       </script> <script type="module" src="/_astro/PageLayout.astro_astro_type_script_index_0_lang.fh8xoccZ.js"></script> </body> </html>
